@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phare</title>
+  <link rel="stylesheet" href="main.min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="wrapper__content">
+      <!-- header -->
+      @@include('./components/header.html')
+
+      <!-- main -->
+      <main>
+        @@include('./components/main/contacts.html')
+      </main>
+
+      <div id="cookie"></div>
+    </div>
+
+    <!-- footer -->
+    @@include('./components/footer.html')
+  </div>
+
+  <script src="main.min.js"></script>
+</body>
+
+</html>

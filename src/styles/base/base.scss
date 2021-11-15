@@ -1,0 +1,379 @@
+:root {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.42;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @include raleway;
+  color: $white;
+  background-color: $black;
+}
+
+.body--locked {
+  overflow: hidden;
+}
+
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul>li {
+  list-style: none;
+}
+
+
+input:not([type=checkbox]):not([type=radio]),
+select {
+  // width: 100%;
+  // outline: none;
+  // background: #FFFFFF;
+  // @include regular();
+  // color: $black;
+  // border-radius: 10px;
+  // padding: rem(19px) rem(23px);
+  // border: 1px solid transparent;
+
+  // &:focus {
+  //   border-color: $brown-dark;
+  // }
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 55px;
+  text-transform: uppercase;
+
+  @include tablets {
+    font-size: 45px;
+  }
+
+  @include phones {
+    font-size: 25px;
+  }
+}
+
+h2 {
+  font-size: 40px;
+  text-transform: uppercase;
+
+  @include tablets {
+    font-size: 30px;
+  }
+
+  @include phones {
+    font-size: 20px;
+  }
+}
+
+h3 {
+  font-size: 20px;
+
+  @include tablets {
+    font-size: 18px;
+  }
+
+  @include phones {
+    font-size: 16px;
+  }
+}
+
+h4 {
+  font-size: 25px;
+  line-height: 1.6;
+
+  @include phones {
+    font-size: 20px;
+  }
+
+}
+
+h5 {
+  // font-size: rem(18px);
+  // font-weight: 500;
+
+  // @include phones {
+  //   font-size: rem(16px);
+  // }
+}
+
+p {
+  margin: 0;
+
+  @include phones {
+    font-size: 14px;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper__content {
+  flex: 1;
+}
+
+/* .dot {
+  display: inline;
+  color: $green;
+}
+
+.subtitle {
+  @include jost(medium);
+  font-size: 20px;
+
+  @include tablets {
+    font-size: 18px;
+  }
+
+  @include phones {
+    font-size: 14px;
+  }
+
+}
+
+.br-phones {
+  display: none;
+
+  @include phones {
+    display: block;
+  }
+} */
+
+/* @keyframes line {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+
+}
+
+;
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+
+}
+
+;
+
+@keyframes radio1 {
+  0% {
+    width: 0;
+    height: 0;
+  }
+
+  30% {
+    opacity: 0.8;
+  }
+
+  80% {
+    opacity: 0.6;
+  }
+
+  100% {
+    width: 438px;
+    height: 438px;
+    opacity: 0;
+  }
+}
+
+;
+
+@keyframes radio2 {
+  0% {
+    width: 0;
+    height: 0;
+  }
+
+  30% {
+    opacity: 0.8;
+  }
+
+  80% {
+    opacity: 0.6;
+  }
+
+  100% {
+    width: 218px;
+    height: 218px;
+    opacity: 0;
+  }
+}
+
+@keyframes radio3 {
+  0% {
+    width: 0;
+    height: 0;
+  }
+
+  30% {
+    opacity: 0.8;
+  }
+
+  80% {
+    opacity: 0.6;
+  }
+
+  100% {
+    width: 685px;
+    height: 685px;
+    opacity: 0;
+  }
+}
+
+
+@keyframes radio1-mob {
+  0% {
+    width: 0;
+    height: 0;
+  }
+
+  30% {
+    opacity: 0.8;
+  }
+
+  80% {
+    opacity: 0.6;
+  }
+
+  100% {
+    width: 217px;
+    height: 217px;
+    opacity: 0;
+  }
+}
+
+
+
+
+@keyframes radio2-mob {
+  0% {
+    width: 0;
+    height: 0;
+  }
+
+  30% {
+    opacity: 0.8;
+  }
+
+  80% {
+    opacity: 0.6;
+  }
+
+  100% {
+    width: 108px;
+    height: 108px;
+    opacity: 0;
+  }
+}
+
+@keyframes showPhare {
+  from {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+
+}
+
+@keyframes showTech1 {
+  from {
+    transform: scale(1.2) translate(-30px, -30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1) translate(0%, 0%);
+    opacity: 1;
+  }
+}
+
+
+@keyframes showTech2 {
+  from {
+    transform: scale(1.2) translate(30px, -30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1) translate(0%, 0%);
+    opacity: 1;
+  }
+}
+
+
+
+@keyframes showTech3 {
+  from {
+    transform: scale(1.2) translate(-30px, 30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1) translate(0%, 0%);
+    opacity: 1;
+  }
+}
+
+@keyframes showTech4 {
+  from {
+    transform: scale(1.2) translate(30px, 30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1) translate(0%, 0%);
+    opacity: 1;
+  }
+} */
