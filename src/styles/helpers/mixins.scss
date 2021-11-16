@@ -6,24 +6,10 @@
 }
 
 @mixin raleway($style: regular) {
+
   font-family: "Raleway",
   Arial,
   sans-serif;
-
-  @if $style==regular {
-    font-weight: 400;
-  }
-
-  @if $style==medium {
-    font-weight: 500;
-  }
-
-}
-@mixin gilroy($style: regular) {
-  font-family: "Gilroy",
-    Arial,
-    sans-serif;
-
 
   @if $style==regular {
     font-weight: 400;

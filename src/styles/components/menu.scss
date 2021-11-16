@@ -1,0 +1,151 @@
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu--opened {
+  & .menu__dropdown {
+    top: 0;
+  }
+
+  & .menu__toggle {
+
+    & span {
+      display: none;
+    }
+
+    &::before {
+      top: 8px;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      top: 8px;
+      width: 100%;
+      transform: rotate(-45deg);
+    }
+
+  }
+}
+
+.menu__toggle {
+  position: relative;
+  z-index: $z-index-menu-toggle;
+  display: none;
+  width: 20px;
+  height: 16px;
+  font-size: 0;
+
+  @include tablets {
+    display: block;
+  }
+
+  &::before,
+  &::after,
+  & span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $white;
+    transition: all 0.8s ease;
+  }
+
+  & span {
+    top: 50%;
+    transform: translateY(-50%);
+    left: auto;
+    right: 0;
+    width: 15px;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+}
+
+
+.menu__dropdown {
+
+  @include tablets {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: -150%;
+    height: 100%;
+    z-index: $z-index-menu-dropdown;
+    padding: 80px 20px 40px 20px;
+    overflow: auto;
+    background-color: $black;
+    background-image: url("images/bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: all 1s ease;
+  }
+
+}
+
+.menu__list {
+  display: flex;
+  align-items: center;
+
+  @include tablets() {
+    flex-direction: column;
+  }
+}
+
+.menu__item {
+  @include tablets {
+    width: 100%;
+    text-align: center;
+    position: relative;
+  }
+
+  &::before {
+    @include tablets {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background-color: rgba($white, 0.1);
+    }
+  }
+}
+
+.menu__item + .menu__item {
+  margin-left: 30px;
+
+  @include tablets {
+    margin-left: 0;
+  }
+}
+
+.menu__link {
+  position: relative;
+  display: inline-block;
+  color: rgba($white, 0.7);
+
+  @include tablets {
+    width: 100%;
+    padding: 15px 0;
+  }
+}
+
+
+.menu__item:hover .menu__link,
+.menu__item--active .menu__link {
+  color: $white;
+}
+

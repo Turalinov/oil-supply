@@ -18,9 +18,14 @@ body {
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  @include raleway;
+  @include raleway();
   color: $white;
   background-color: $black;
+  background-image: url("images/bg.png");
+  background-repeat: repeat;
+  background-position: center;
+  background-size: contain;
+  transition: all 1s ease;
 }
 
 .body--locked {
