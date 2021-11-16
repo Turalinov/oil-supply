@@ -7,3 +7,19 @@ button {
     // outline: none;
   }
 }
+
+.btn {
+  background-color: $orange;
+  padding: 20px 25px;
+  font-size: 20px;
+  color: $white;
+
+  @include tablets {
+    padding: 18px 25px;
+    font-size: 14px;
+  }
+
+  &:hover {
+    background-color: #000;
+  }
+}
