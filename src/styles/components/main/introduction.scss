@@ -1,0 +1,49 @@
+.introducrion {
+  padding: 100px 0 90px;
+
+  @include phones {
+    padding: 25px 0 30px;
+  }
+}
+.introducrion > .container,
+.why > .container {
+  display: flex;
+
+  @include phones {
+    flex-direction: column;
+  }
+}
+.introduction__elem,
+.why__elem {
+  width: 50%;
+
+  @include phones {
+    width: 100%;
+
+    &:first-child {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.introduction__desc p,
+.why__desc p {
+  font-size: 18px;
+
+  @include tablets {
+    font-size: 16px;
+  }
+
+  @include phones {
+    font-size: 12px;
+  }
+}
+.introduction__desc>p+p,
+.why__desc>p+p {
+  margin-top: 33px;
+
+  @include phones {
+    margin-top: 20px;
+  }
+}
+

@@ -31,26 +31,41 @@
     @include phones {
       top: -345px;
       left: -237px;
-      z-index: -1;
       transform: scale(0.5);
     }
 
   }
+
+
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 729px;
+      height: 729px;
+      background: $orange;
+      border-radius: 50%;
+      box-shadow: 0px 0px 1000px $orange;
+      filter: blur(67px);
+      opacity: 0.11;
+      top: 137px;
+      left: 963px;
+      z-index: -1;
+
+      @include phones {
+        top: 274px;
+        left: -30px;
+        transform: scale(0.5);
+      }
+
+    }
 }
 
 .hero__title {
-  @include syncopate();
-  font-size: 75px;
-  line-height: 1.2;
   margin-bottom: 13px;
 
   @include tablets {
-    font-size: 45px;
     margin-bottom: 16px;
-  }
-
-  @include phones {
-    font-size: 30px;
   }
 }
 .hero__desc {

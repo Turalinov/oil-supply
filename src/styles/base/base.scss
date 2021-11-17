@@ -60,6 +60,7 @@ select {
 }
 
 a {
+  color: rgba($white, 0.5);
   text-decoration: none;
 }
 
@@ -69,41 +70,29 @@ h3,
 h4,
 h5,
 h6 {
+  @include syncopate();
   margin: 0;
   padding: 0;
 }
 
 h1 {
-  font-size: 55px;
-  text-transform: uppercase;
+  font-size: 75px;
+  line-height: 1.2;
 
   @include tablets {
     font-size: 45px;
   }
 
   @include phones {
-    font-size: 25px;
+    font-size: 30px;
   }
 }
 
 h2 {
-  font-size: 40px;
-  text-transform: uppercase;
+  font-size: 30px;
 
   @include tablets {
-    font-size: 30px;
-  }
-
-  @include phones {
-    font-size: 20px;
-  }
-}
-
-h3 {
-  font-size: 20px;
-
-  @include tablets {
-    font-size: 18px;
+    font-size: 24px;
   }
 
   @include phones {
@@ -111,15 +100,27 @@ h3 {
   }
 }
 
-h4 {
-  font-size: 25px;
-  line-height: 1.6;
+h3 {
+  font-size: 20px;
 
-  @include phones {
-    font-size: 20px;
+  @include tablets {
+    font-size: 16px;
   }
 
+  @include phones {
+    font-size: 14px;
+  }
 }
+
+// h4 {
+//   font-size: 25px;
+//   line-height: 1.6;
+
+//   @include phones {
+//     font-size: 20px;
+//   }
+
+// }
 
 h5 {
   // font-size: rem(18px);

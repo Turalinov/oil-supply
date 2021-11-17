@@ -1,0 +1,7 @@
+.why {
+  padding: 80px 0 30px;
+
+  @include phones {
+    padding: 30px 0 20px;
+  }
+}
