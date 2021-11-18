@@ -4,7 +4,7 @@
   right: 0;
   z-index: $z-index-menu-header;
   padding: 50px 0 40px;
-  transition: background 1s ease;
+  transition: background 0.8s ease;
 
   @include tablets {
     padding: 20px 0;

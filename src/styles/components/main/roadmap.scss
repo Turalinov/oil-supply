@@ -1,0 +1,185 @@
+.roadmap {
+  padding: 65px 0 40px;
+
+  @include phones {
+    padding: 25px 0 25px;
+  }
+}
+.roadmap > .container {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 729px;
+    height: 729px;
+    background: $orange;
+    border-radius: 50%;
+    box-shadow: 0px 0px 1000px $orange;
+    filter: blur(67px);
+    opacity: 0.11;
+    top: 1164px;
+    left: 743px;
+    z-index: -1;
+
+    @include phones {
+      top: -212px;
+      left: -30px;
+      transform: scale(0.5);
+    }
+
+  }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 729px;
+      height: 729px;
+      background: $orange;
+      border-radius: 50%;
+      box-shadow: 0px 0px 1000px $orange;
+      filter: blur(67px);
+      opacity: 0.11;
+      top: 1164px;
+      left: 743px;
+      z-index: -1;
+      display: none;
+
+      @include phones {
+        top: 958px;
+        left: -393px;
+        transform: scale(0.5);
+        display: block;
+      }
+
+    }
+}
+
+.roadmap__title {
+  margin-bottom: 50px;
+
+  @include phones {
+    margin-bottom: 5px;
+  }
+}
+
+.roadmap__list {
+}
+
+.roadmap__item {
+  padding: 50px 0;
+
+  @include phones {
+    padding: 30px 0;
+  }
+}
+
+.roadmap__item:last-child {
+  @include phones {
+    padding: 0;
+  }
+}
+
+.roadmap__item:not(:first-child) {
+  border-top: 1px solid rgba($white, 0.2);
+}
+
+.roadmap__item > .roadmap__row + .roadmap__row {
+  margin-top: 60px;
+
+  @include phones {
+    margin-top: 0px;
+  }
+}
+
+.roadmap__row {
+  display: flex;
+
+  @include phones {
+    flex-direction: column;
+  }
+
+  &:not(:last-child) {
+    @include phones {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.roadmap__row > .roadmap__col + .roadmap__col {
+  margin-left: 100px;
+
+  @include tablets {
+    margin-left: 40px;
+  }
+
+  @include phones {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
+
+.roadmap__col {
+  flex: 1 1 350px;
+
+  @include phones {
+    flex: initial;
+  }
+
+  // &:not(:last-child) {
+  //   @include phones {
+  //     margin-bottom: 20px;
+  //   }
+  // }
+}
+
+.roadmap__col.roadmap__col--empty {
+  @include phones {
+    display: none;
+  }
+}
+
+.roadmap__subtitle {
+}
+
+.roadmap__subtitle > span:first-child {
+  color: $orange;
+  display: block;
+}
+
+.roadmap__text {
+  //
+}
+
+.roadmap__text p{
+  font-size: 18px;
+  @include tablets {
+    font-size: 14px;
+  }
+
+  @include phones {
+    font-size: 12px;
+  }
+
+}
+
+.roadmap__text > p + p {
+  margin-top: 25px;
+
+  @include phones {
+    margin-top: 20px;
+  }
+}
+
+.roadmap__info {
+  color: #6a6a6a;
+  @include raleway(semibold);
+
+  @include tablets {
+    font-size: 14px;
+  }
+
+  @include phones {
+    font-size: 12px;
+  }
+}

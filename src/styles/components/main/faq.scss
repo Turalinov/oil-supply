@@ -1,0 +1,41 @@
+.faq {
+  padding: 80px 0 60px;
+
+  @include phones{
+    padding: 25px 0 25px;
+  }
+}
+
+.faq>.container {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 729px;
+    height: 729px;
+    background: $orange;
+    border-radius: 50%;
+    box-shadow: 0px 0px 1000px $orange;
+    filter: blur(67px);
+    opacity: 0.11;
+    top: 398px;
+    left: -319px;
+    z-index: -1;
+
+    @include phones {
+      top: 240px;
+      left: -56px;
+      transform: scale(0.5);
+    }
+
+  }
+}
+
+.faq__title {
+  margin-bottom: 65px;
+
+  @include tablets {
+    margin-bottom: 5px;
+  }
+}

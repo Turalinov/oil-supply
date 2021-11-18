@@ -1,0 +1,106 @@
+.accordion {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @include tablets {
+    flex-direction: column;
+  }
+}
+
+.accordion__elem {
+  max-width: 420px;
+
+  @include tablets {
+    max-width: initial;
+  }
+}
+
+.accordion__item {
+  border-bottom: 1px solid rgba($white, 0.2);
+}
+
+.accordion__control {
+  color: inherit;
+  font-size: 20px;
+  padding: 25px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  @include phones {
+    font-size: 16px;
+    padding: 20px 0;
+  }
+}
+
+.accordion__title {
+  text-align: left;
+
+  @include phones {
+    // font-size: 14px;
+    // max-width: 90%;
+  }
+}
+
+.accordion__icon {
+  stroke: $white;
+  width: 30px;
+  height: 30px;
+  stroke-width: 1.5px;
+  transition: all 0.3s ease-out;
+
+  @include phones {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.open .accordion__icon {
+  transform: rotate(45deg);
+}
+
+.accordion__content {
+  font-size: 14px;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  padding: 0;
+  will-change: max-height;
+  transition: all 0.3s ease-out;
+  box-sizing: content-box;
+
+  @include phones {
+    font-size: 12px;
+  }
+}
+.accordion__content>ul>li {
+  list-style: disc;
+  list-style-position: inside;
+}
+
+.accordion__content > ul > li + li {
+  margin-top: 10px;
+}
+
+.open .accordion__content {
+  opacity: 0.8;
+  padding-bottom: 25px;
+
+  @include phones {
+    padding-bottom: 20px;
+  }
+}
+
+.accordion__content p {
+  font-size: 14px;
+
+  @include phones {
+    font-size: 12px;
+  }
+}
+
+.accordion__content>p+p {
+  margin-top: 10px;
+
+}
