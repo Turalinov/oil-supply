@@ -415,3 +415,14 @@ img {
 // }
 
 
+main {
+  margin-top: 114px;
+
+  @include tablets {
+    margin-top: 64px;
+  }
+
+  @include phones {
+    margin-top: 56px;
+  }
+}

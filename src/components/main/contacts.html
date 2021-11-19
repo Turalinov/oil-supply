@@ -1,4 +1,4 @@
-<section class="contacts">
+<section class="contacts" id="contacts">
   <div class="container">
     <h2 class="contacts__title">
       Contact Us
@@ -30,17 +30,20 @@
 
         <div class="contacts__form form">
 
-          <form action="#" class="form__elem">
+          <form action="#" class="form__elem" id="form-contacts">
             <div class="form__row">
               <input type="text" class="form__input" placeholder="Your Name" name="username">
+              <div class="form__error">Required fieldr</div>
             </div>
 
             <div class="form__row">
               <input type="email" class="form__input" placeholder="Your Email" name="email">
+              <div class="form__error">Required fieldr</div>
             </div>
 
             <div class="form__row">
-              <textarea class="form__input form__input--textarea" placeholder="Your message"></textarea>
+              <textarea class="form__input form__input--textarea" placeholder="Your message" name="message"></textarea>
+              <div class="form__error">Required fieldr</div>
             </div>
 
 

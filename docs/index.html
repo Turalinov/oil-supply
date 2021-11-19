@@ -31,31 +31,31 @@
       </button>
 
       <div class="menu__dropdown">
-        <ul class="menu__list">
+        <ul class="menu__list menu__list--adaptive">
           <li class="menu__item">
             <!--  -->
-            <a href="#" class="menu__link">About Us</a>
+            <a href="#intro" class="menu__link">About Us</a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link">Our Tokens Us</a>
+            <a href="#tokens" class="menu__link">Our Tokens</a>
           </li>
           <li class="menu__item menu__item--active">
-            <a href="#" class="menu__link">Roadmap</a>
+            <a href="#roadmap" class="menu__link">Roadmap</a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link">Our Team</a>
+            <a href="#team" class="menu__link">Our Team</a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link">Our Mission</a>
+            <a href="#mission" class="menu__link">Our Mission</a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link">Partners</a>
+            <a href="#partners" class="menu__link">Partners</a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link">FAQ</a>
+            <a href="#faq" class="menu__link">FAQ</a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link">Contact</a>
+            <a href="#contacts" class="menu__link">Contact</a>
           </li>
         </ul>
 
@@ -96,7 +96,7 @@
   </div>
 </section>
 
-        <section class="partners">
+        <section class="partners" id="partners">
   <div class="container">
     <!-- Главный контейнер слайдера -->
     <div class="partners-slider swiper">
@@ -184,7 +184,7 @@
   </div>
 </section>
 
-        <section class="introducrion">
+        <section class="introducrion" id="intro">
   <div class="container">
     <div class="introduction__elem">
       <h2 class="introduction__title">
@@ -309,7 +309,7 @@
   </div>
 </section>
 
-        <section class="tokens">
+        <section class="tokens" id="tokens">
   <div class="container">
     <h2 class="tokens__title">
       Meet our tokens
@@ -511,7 +511,7 @@
   </div>
 </section>
 
-        <section class="roadmap">
+        <section class="roadmap" id="roadmap">
   <div class="container">
     <h2 class="roadmap__title">roadmap</h2>
 
@@ -672,7 +672,7 @@
   </div>
 </section>
 
-        <section class="mission">
+        <section class="mission" id="mission">
   <div class="container">
     <h2 class="mission__title">Our missions</h2>
 
@@ -739,7 +739,7 @@
   </div>
 </section>
 
-        <section class="team">
+        <section class="team" id="team">
   <div class="container">
     <h2 class="team__title">
       Meet our team
@@ -888,7 +888,7 @@
   </div>
 </section>
 
-        <section class="faq">
+        <section class="faq" id="faq">
   <div class="container">
 
 
@@ -1006,7 +1006,7 @@
   </div>
 </section>
 
-        <section class="contacts">
+        <section class="contacts" id="contacts">
   <div class="container">
     <h2 class="contacts__title">
       Contact Us
@@ -1038,17 +1038,20 @@
 
         <div class="contacts__form form">
 
-          <form action="#" class="form__elem">
+          <form action="#" class="form__elem" id="form-contacts">
             <div class="form__row">
               <input type="text" class="form__input" placeholder="Your Name" name="username">
+              <div class="form__error">Required fieldr</div>
             </div>
 
             <div class="form__row">
               <input type="email" class="form__input" placeholder="Your Email" name="email">
+              <div class="form__error">Required fieldr</div>
             </div>
 
             <div class="form__row">
-              <textarea class="form__input form__input--textarea" placeholder="Your message"></textarea>
+              <textarea class="form__input form__input--textarea" placeholder="Your message" name="message"></textarea>
+              <div class="form__error">Required fieldr</div>
             </div>
 
 
