@@ -1,0 +1,37 @@
+.footer {
+  padding: 90px 0 20px;
+
+  @include phones {
+    padding: 25px 0 25px;
+    text-align: center;
+  }
+}
+
+.footer > .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include phones {
+    flex-direction: column;
+  }
+}
+
+.footer__copy {
+  font-size: 14px;
+  color: rgba($white, 0.5);
+
+  @include phones {
+    margin-bottom: 15px;
+    font-size: 12px;
+  }
+}
+
+.footer__link {
+  font-size: 14px;
+  color: rgba($white, 0.5);
+
+  @include phones {
+    font-size: 12px;
+  }
+}
