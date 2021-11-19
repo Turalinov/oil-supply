@@ -1,0 +1,37 @@
+.socials {
+  //
+}
+
+.socials__list {
+  display: flex;
+  align-items: center;
+}
+
+.socials__item {}
+
+.socials__item+.socials__item {
+  margin-left: 35px;
+
+  @include phones {
+    margin-left: 33px;
+  }
+}
+
+.socials__link {
+  display: block;
+  transition: .3s ease;
+  font-size: 20px;
+
+  @include tablets {
+    font-size: 16px;
+  }
+
+  @include phones {
+    font-size: 14px;
+  }
+}
+
+
+.socials__item:hover .socials__link {
+  color: $white;
+}

@@ -1,0 +1,63 @@
+.form {
+  box-sizing: border-box;
+}
+
+.form__row {
+  // display: flex;
+}
+
+.form__elem>.form__row+.form__row {
+  margin-top: 45px;
+
+  @include phones {
+    margin-top: 40px;
+  }
+}
+
+.form__input {
+  font-size: 20px;
+  color: $white;
+  background: transparent;
+  width: 100%;
+  padding: 0px 20px 20px 0px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgba($white, 0.2);
+
+  @include tablets {
+    font-size: 18px;
+    padding: 0px 15px 15px 0px;
+  }
+
+  @include phones {
+    font-size: 16px;
+  }
+}
+
+.form__input:focus {
+  border-bottom: 1px solid rgba($white, 0.5);
+}
+
+.form__input--textarea {
+  font-size: 20px;
+  color: $white;
+  background: transparent;
+  resize: unset;
+  height: 173px;
+
+  @include tablets {
+    font-size: 18px;
+  }
+
+  @include phones {
+    font-size: 16px;
+    height: 119px;
+  }
+}
+
+.form__btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

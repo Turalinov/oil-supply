@@ -1,0 +1,42 @@
+.contacts {
+  padding: 90px 0;
+
+  @include phones {
+    padding: 25px 0;
+  }
+}
+.contacts__title {
+  margin-bottom: 50px;
+
+  @include phones {
+    margin-bottom: 30px;
+  }
+}
+.contacts__row {
+  display: flex;
+
+  @include phones {
+    flex-direction: column;
+  }
+}
+
+.contacts__row>.contacts__col+.contacts__col {
+  @include phones {
+    margin-top: 50px;
+  }
+}
+
+
+.contacts__col {
+  width: 50%;
+
+  @include phones {
+    width: 100%;
+  }
+}
+.contacts__socials {
+  //
+}
+.contacts__form {
+  //
+}
