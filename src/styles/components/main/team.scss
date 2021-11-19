@@ -1,0 +1,68 @@
+.team {
+  padding: 90px 0;
+
+  @include phones {
+    padding: 25px 0;
+  }
+}
+
+.team>.container {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 1345px;
+    height: 563px;
+    background: $orange;
+    border-radius: 50%;
+    box-shadow: 0px 0px 1000px $orange;
+    filter: blur(68px);
+    opacity: 0.11;
+    top: -129px;
+    left: -885px;
+    z-index: -1;
+    display: none;
+
+    @include phones {
+      display: block;
+      width: 360px;
+      height: 360px;
+      top: -23px;
+      left: -174px;
+    }
+
+  }
+}
+
+.team__title {
+  margin-bottom: 40px;
+
+  @include phones {
+    margin-bottom: 30px;
+  }
+}
+.team__row {
+  margin-bottom: 80px;
+  display: flex;
+
+  @include phones {
+    margin-bottom: 40px;
+    flex-direction: column;
+  }
+}
+.team__col {
+  width: 50%;
+
+  @include phones {
+    width: 100%;
+  }
+}
+
+.team__col p {
+  font-size: 14px;
+
+  @include phones {
+    font-size: 12px;
+  }
+}

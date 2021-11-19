@@ -125,12 +125,12 @@ h4 {
 }
 
 h5 {
-  // font-size: rem(18px);
-  // font-weight: 500;
+  font-size: 16px;
 
-  // @include phones {
-  //   font-size: rem(16px);
-  // }
+
+  @include phones {
+    font-size: 14px;
+  }
 }
 
 p {

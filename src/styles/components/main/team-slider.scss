@@ -1,0 +1,100 @@
+.team-slider {
+  overflow: initial;
+  cursor: url('images/drag.svg'), pointer;
+
+  @include tablets {
+    cursor: pointer;
+  }
+}
+
+.team-slider__wrapper {
+
+}
+
+.team-slider__slide {
+  width: auto;
+
+  @include phones {
+    width: auto;
+  }
+
+  // transition: transform 1s ease;
+
+  &:hover {
+    // transform: scale(1.1);
+    // z-index: 1;
+    // box-shadow: 0px 9px 30px rgba(124, 136, 190, 0.1);
+  }
+}
+
+.team-slider__content {
+  box-sizing: border-box;
+  max-width: 360px;
+  min-height: 485px;
+
+  @include phones {
+    max-width: 212px;
+    min-height: 302px;
+  }
+}
+
+.team-slider__top {
+  height: 404px;
+  margin-bottom: 30px;
+  position: relative;
+
+  @include phones {
+    height: 237px;
+    margin-bottom: 20px;
+  }
+}
+
+.team-slider__img-wrap {
+  height: 100%;
+  width: 100%;
+}
+
+.team-slider__img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-slider__top:hover>.team-slider__desc {
+  opacity: 1;
+}
+
+.team-slider__desc {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $orange;
+  padding: 30px 40px 30px 30px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity .5s linear;
+
+  @include phones {
+    padding: 20px;
+    font-size: 12px;
+    overflow-x: auto;
+  }
+}
+
+.team-slider__bottom {
+  text-align: center;
+}
+
+.team-slider__fullname {
+  margin-bottom: 5px;
+
+}
+
+.team-slider__position {
+  font-size: 14px;
+
+  @include phones {
+    font-size: 12px;
+  }
+}
