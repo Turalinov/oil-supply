@@ -23,3 +23,23 @@ button {
     background-color: #000;
   }
 }
+
+.btn--bordered {
+  background-color: transparent;
+  border: 1px solid $orange;
+  color: $orange;
+
+
+  &:hover {
+    background-color: $orange;
+    color: $white;
+  }
+
+}
+
+
+.btn-arrow {
+  width: 14px;
+  height: 14px;
+  fill: $white;
+}
