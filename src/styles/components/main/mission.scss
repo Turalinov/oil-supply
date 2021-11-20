@@ -160,16 +160,23 @@
 }
 
 .mission__map-pic {
+  text-align: center;
   @include phones {
     height: 192px;
   }
   //
 }
 
-.mission__map-img {
+.mission__map-pic-img {
+  background-color: #0f0f0f;
+  padding: 10px 0;   
   height: 100%;
-  object-fit: cover;
+    width: 100%;
 
+  & svg {
+    height: 100%;
+    width: 100%;
+  }
 }
 
 .mission__map-bottom {
