@@ -100,19 +100,20 @@
   top: -60px;
   width: 480px;
   height: 490px;
-  background-image: url("images/oil.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+  transform: scale(1.5);
+  // background-image: url("images/oil.png");
+  // background-repeat: no-repeat;
+  // background-position: center;
+  // background-size: contain;
 
   @include tablets {
-    transform: scale(0.7);
+    transform: scale(1);
     left: calc(50% - 6px);
     top: -100px;
   }
 
   @include phones {
-    transform: scale(0.5);
+    transform: scale(0.7);
     left: calc(50% - 246px);
     top: -390px;
   }

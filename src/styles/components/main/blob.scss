@@ -1,0 +1,18 @@
+.blob {
+  position: relative;
+
+  canvas {
+    width: 1000px;
+    margin-top: -7%;
+    margin-left: -280px;
+
+    @media(max-width: 1200px) {
+      margin-top: -10%;
+      width: 800px
+    }
+
+    @media(max-width: 600px) {
+      width: 800px
+    }
+  }
+}
