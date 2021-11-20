@@ -62,6 +62,17 @@
   justify-content: space-between;
 }
 
+.form__btn .liquid {
+  // top: -369px;
+  // left: -90px;
+  // width: 800px;
+  // height: 800px;
+
+  // @include tablets {
+  //   display: none;
+  // }
+}
+
 .form__error {
   opacity: 0;
   color: $orange;

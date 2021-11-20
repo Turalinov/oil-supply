@@ -9,6 +9,8 @@ button {
 }
 
 .btn {
+  overflow: hidden;
+  position: relative;
   background-color: $orange;
   padding: 20px 25px;
   font-size: 20px;
@@ -23,6 +25,14 @@ button {
     background-color: #000;
   }
 }
+
+
+.btn > span:first-child  {
+  z-index: 1;
+}
+
+
+
 
 .btn--bordered {
   background-color: transparent;
@@ -42,4 +52,59 @@ button {
   width: 14px;
   height: 14px;
   fill: $white;
+  z-index: 1;
+}
+
+
+.btn .liquid {
+  position: absolute;
+  top: -126px;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  background: $orange;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
+  transition: .5s;
+
+  @include tablets {
+    // display: none;
+  }
+}
+
+.btn .liquid::after,
+.btn .liquid::before {
+  content: '';
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  background: #000;
+}
+
+.btn .liquid::before {
+  border-radius: 45%;
+  background: rgba(20, 20, 20, 1);
+  animation: animate 5s linear infinite;
+}
+
+.btn .liquid::after {
+  border-radius: 40%;
+  background: rgba(20, 20, 20, .5);
+  animation: animate 10s linear infinite;
+}
+
+.btn:hover .liquid {
+  display: none;
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
 }
