@@ -29,4 +29,11 @@
 }
 
 .partners-slider__img {
+  cursor: pointer;
+  opacity: 0.25;
+  transition: .8s;
+}
+
+.partners-slider__img:hover {
+  opacity: 1;
 }

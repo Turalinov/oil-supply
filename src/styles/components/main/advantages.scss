@@ -40,6 +40,14 @@
 
   // display: inline-grid;
   // grid-template-columns: repeat(4, 1fr);
+  transform: translate(0px, 80%);
+  opacity: 0;
+  transition: all .8s ease 0s;
+}
+
+.advantages__list._active {
+  transform: translate(0px, 0px);
+  opacity: 1;
 }
 
 .advantages__item {

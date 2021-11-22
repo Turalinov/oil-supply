@@ -1,0 +1,42 @@
+.politics {
+  text-align: initial;
+}
+
+.politics__title {
+  margin-bottom: 40px;
+
+  @include tablets {
+    margin-bottom: 35px;
+  }
+
+  @include phones {
+    margin-bottom: 25px;
+  }
+}
+
+.politics__text {
+  //
+}
+
+.politics__text h3 {
+  text-transform: uppercase;
+  margin-bottom: 15px;
+
+  &:not(:first-child) {
+    margin-top: 40px;
+  }
+}
+
+.politics__text p {
+  @include tablets {
+    font-size: 14px;
+  }
+
+  @include phones {
+    font-size: 12px;
+  }
+}
+
+.politics__text p+p {
+  margin-top: 20px;
+}

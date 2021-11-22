@@ -1,6 +1,15 @@
 .tokens-slider {
   // overflow: initial;
   position: relative;
+  transform: translate(0px, 10%);
+  opacity: 0;
+  transition: all .8s ease 0s;
+}
+
+.tokens-slider._active {
+
+  transform: translate(0px, 0px);
+  opacity: 1;
 }
 
 .tokens-slider__wrapper {}

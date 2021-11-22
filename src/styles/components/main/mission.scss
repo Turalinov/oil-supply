@@ -57,10 +57,20 @@
 
 .mission__title {
   margin-bottom: 100px;
+  transform: translate(0px, 150%);
+  opacity: 0;
+  transition: all .8s ease 0s;
 
   @include phones {
     margin-bottom: 30px;
   }
+}
+
+.mission__title._active {
+
+  transform: translate(0px, 0px);
+  opacity: 1;
+
 }
 
 .mission__info {
@@ -80,6 +90,24 @@
     flex: 1 1 100%;
   }
 }
+
+.mission__info-pic,
+.mission__info-pic2,
+.mission__map-pic-img {
+  transform: translate(0px, 20%);
+  opacity: 0;
+  transition: all .8s ease 0s;
+}
+
+.mission__info-pic._active,
+.mission__info-pic2._active,
+.mission__map-pic-img._active {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+
+
+
 .mission__info-pic {
   max-width: 70%;
 
@@ -122,6 +150,7 @@
   // object-fit: cover;
   // object-position: center -120px;
 }
+
 .mission__elem p,
 .mission__elem-text p,
 .mission__map-info p {
@@ -133,9 +162,10 @@
     font-size: 12px;
   }
 }
+
 .mission__elem>p+p,
 .mission__elem-text>p+p,
-.mission__map-info > p + p {
+.mission__map-info>p+p {
   margin-top: 25px;
 
   @include phones {
@@ -161,17 +191,19 @@
 
 .mission__map-pic {
   text-align: center;
+
   @include phones {
     height: 192px;
   }
+
   //
 }
 
 .mission__map-pic-img {
   background-color: #0f0f0f;
-  padding: 10px 0;   
+  padding: 10px 0;
   height: 100%;
-    width: 100%;
+  width: 100%;
 
   & svg {
     height: 100%;

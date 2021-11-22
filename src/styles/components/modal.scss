@@ -1,0 +1,54 @@
+.modal {
+  background: rgba($black, 0.6);
+  position: fixed;
+  z-index: $z-index-modal;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  color: $white;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.8s ease 0s;
+
+  &.modal--showed {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.modal__content {
+  background-color: $black;
+  border: 1px solid rgba($white, 0.2);
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 50px;
+  text-align: center;
+  width: 80%;
+
+  @include tablets {
+    padding: 30px;
+  }
+
+  @include phones {
+    //
+  }
+}
+
+.modal__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 17px;
+  height: 17px;
+  cursor: pointer;
+}
+
+.modal__info {
+  //
+}
+

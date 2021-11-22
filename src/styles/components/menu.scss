@@ -136,6 +136,7 @@
   position: relative;
   display: inline-block;
   color: rgba($white, 0.7);
+  transition: 0.5s;
 
   @include tablets {
     width: 100%;

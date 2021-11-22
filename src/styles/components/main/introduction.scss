@@ -26,6 +26,34 @@
   }
 }
 
+.introduction__title,
+.why__title {
+  transform: translate(0px, 150%);
+  opacity: 0;
+  transition: all .8s ease 0s;
+}
+
+.introduction__title._active,
+.why__title.active {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+
+.introduction__desc,
+.why__desc{
+  transform: translate(0px, 150%);
+  opacity: 0;
+  transition: all .8s ease 0s;
+
+}
+
+.introduction__desc._active,
+.why__desc._active {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+
+
 .introduction__desc p,
 .why__desc p {
   font-size: 18px;
