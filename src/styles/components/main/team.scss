@@ -37,11 +37,20 @@
 
 .team__title {
   margin-bottom: 40px;
+  transform: translate(0px, 150%);
+  opacity: 0;
+  transition: all .8s ease 0s;
 
   @include phones {
     margin-bottom: 30px;
   }
 }
+
+.team__title._active {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+
 .team__row {
   margin-bottom: 80px;
   display: flex;
@@ -51,12 +60,21 @@
     flex-direction: column;
   }
 }
+
 .team__col {
   width: 50%;
+  transform: translate(0px, 150%);
+  opacity: 0;
+  transition: all .8s ease 0s;
 
   @include phones {
     width: 100%;
   }
+}
+
+.team__col._active {
+  transform: translate(0px, 0px);
+  opacity: 1;
 }
 
 .team__col p {

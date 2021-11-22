@@ -34,8 +34,26 @@
 
 .faq__title {
   margin-bottom: 65px;
+  transform: translate(0px, 150%);
+  opacity: 0;
+  transition: all .8s ease 0s;
 
   @include tablets {
     margin-bottom: 5px;
   }
+}
+.faq__title._active {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+
+.faq__list {
+
+  transform: translate(0px, 40%);
+  opacity: 0;
+  transition: all .8s ease 0s;
+}
+.faq__list._active {
+  transform: translate(0px, 0px);
+  opacity: 1;
 }
