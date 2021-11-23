@@ -44,6 +44,22 @@
 .contacts__socials {
   //
 }
+
+.contacts__address {
+  font-variant-numeric: lining-nums;
+  font-size: 20px;
+  color: rgba($white, 0.5);
+  margin-bottom: 15px;
+
+  @include tablets {
+    font-size: 16px;
+  }
+
+  @include phones {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+}
 .contacts__form {
   //
 }

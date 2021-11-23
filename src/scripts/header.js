@@ -5,7 +5,6 @@
 
   function doSomething(scroll_pos) {
     // Делаем что-нибудь с позицией скролла
-    // console.log(scroll_pos)
 
     if (scroll_pos > 5) {
       header.classList.add('_active')

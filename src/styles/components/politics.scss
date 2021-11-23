@@ -27,7 +27,8 @@
   }
 }
 
-.politics__text p {
+.politics__text p,
+.politics__text ul li {
   @include tablets {
     font-size: 14px;
   }
@@ -39,4 +40,13 @@
 
 .politics__text p+p {
   margin-top: 20px;
+}
+
+.politics__text p + ul {
+  margin-top: 20px;
+}
+
+.politics__text ul > li {
+  list-style: disc;
+  margin-left: 40px;
 }

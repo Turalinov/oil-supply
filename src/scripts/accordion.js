@@ -1,5 +1,4 @@
 (function(){
-  console.log('accordion');
   const accordions=document.querySelectorAll('.accordion__item');
   accordions.forEach(el => {
     el.addEventListener('click', (e) => {

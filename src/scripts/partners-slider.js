@@ -1,5 +1,4 @@
 (function() {
-  console.log('partners-slider');
 //Инициализируем слайдер
 new Swiper('.partners-slider', {
   //Стрелки

@@ -1,5 +1,4 @@
 (function() {
-  console.log('tokens-slider');
 //Инициализируем слайдер
 new Swiper('.tokens-slider', {
   //Стрелки

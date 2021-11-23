@@ -22,23 +22,6 @@
 
           foreach ($data as $key => $value) {
 
-            if ($key == "formtype") {
-
-              if( $value == "reco" ) {
-                $subject = "Convaincre mon RH/CSE";
-              } else if ($value == "demo" ) {
-                $subject = "Demandez une démo";
-
-              } else {
-                $subject = "Souscrire le contrat";
-
-
-              }
-
-
-              continue;
-            }
-
             if($key == "username") {
               $key = "Name";
             } else if ($key == "email") {
@@ -53,14 +36,14 @@
               $mail->isSMTP();
               $mail->Host = "smtp.gmail.com";
               $mail->SMTPAuth  = true;
-              $mail->Username =  'testproject9494@gmail.com';
-              $mail->Password = 'YPyeg4RI1ay#';
+              $mail->Username =  'testingoil94@gmail.com';
+              $mail->Password = 's87d6s7ds54dsdS';
               $mail->SMTPSecure = PHPMailer :: ENCRYPTION_SMTPS ;
               $mail->Port = 465;
               $mail->CharSet = 'UTF-8';
 
               $mail->isHTML(true);
-              $mail->setFrom('testproject9494@gmail.com', 'OILSupply');
+              $mail->setFrom('testingoil94@gmail.com', 'OILSupply');
               $mail->addAddress('rusltur_24@mail.ru'); //contact@phare360.com
               $mail->Subject = $subject;
               $mail->Body = $message;

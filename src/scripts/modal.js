@@ -1,7 +1,5 @@
 (function() {
 
-  console.log('politics modal');
-
   const links = document.querySelectorAll('.politics__link'); //для всех кнопок, которые будут открывать модальное окно мы навешиваем класс politics__link
 
   const body = document.querySelector('body'); // для того чтобы блокировать скролл
@@ -56,7 +54,6 @@
     }
 
     function bodyUnlock(){
-      console.log('bodyUnlock');
 
       setTimeout(() => {
 
@@ -85,7 +82,6 @@
 
     function bodyLock(){
 
-      console.log();
       const innerWidth = window.innerWidth
       const offsetWidth = body.offsetWidth
 

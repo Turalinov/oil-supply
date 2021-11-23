@@ -1,5 +1,4 @@
 (function() {
-  console.log('menu');
 
   const menuToggle = document.querySelector('.menu__toggle');
 

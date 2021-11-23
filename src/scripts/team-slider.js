@@ -1,5 +1,4 @@
 (function() {
-  console.log('team-slider');
 //Инициализируем слайдер
 new Swiper('.team-slider', {
   //Стрелки
