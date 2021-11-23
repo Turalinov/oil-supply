@@ -2,4 +2,4 @@ node_modules
 PHPMailer
 .DS_Store
 action-form.php
-docs/action-form.php
+*.php
